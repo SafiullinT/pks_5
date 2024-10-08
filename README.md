@@ -1,16 +1,18 @@
-# pks_5
+# Практическая работа 5 ПКС
 
-A new Flutter project.
+## Сафиуллин Тимур Иванович ЭФБО-03-22
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Главная страница
+![Главная страница](https://github.com/SafiullinT/pks_5/blob/master/images/2.jpg)
+## Страница избранное
+![Избранное](https://github.com/SafiullinT/pks_5/blob/master/images/5.jpg)
+## Страница профиль
+![Профиль](https://github.com/SafiullinT/pks_5/blob/master/images/6.jpg)
+## Добавление товара
+![Добавление товара](https://github.com/SafiullinT/pks_5/blob/master/images/10.jpg)
+## Страница добавленного товара
+![Страница товара](https://github.com/SafiullinT/pks_5/blob/master/images/7.jpg)
+## Удаление товара
+![Удаление товара](https://github.com/SafiullinT/pks_5/blob/master/images/8.jpg)
+## Добавление в избранное
+![Доб. избранное](https://github.com/SafiullinT/pks_5/blob/master/images/1.jpg)
