@@ -6,28 +6,27 @@ class CarCard extends StatelessWidget {
   final Car car;
   final VoidCallback onDeleteCar;
   final VoidCallback onToggleFavorite;
-  final VoidCallback onTap; // Добавлено для обработки нажатия на карточку
+  final VoidCallback onTap;
 
   CarCard({
     required this.car,
     required this.onDeleteCar,
     required this.onToggleFavorite,
-    required this.onTap, // Инициализируем обработчик нажатия
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return Card(
       margin: EdgeInsets.all(10),
-      child: InkWell( // Используем InkWell для обработки нажатия
+      child: InkWell(
         onTap: onTap,
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start, // Выравниваем содержимое по левому краю
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Изображение автомобиля
             Container(
-              height: 130, // Установите высоту для изображения
-              width: double.infinity, // Ширина изображения на всю ячейку
+              height: 130,
+              width: double.infinity,
               child: ClipRRect(
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(4),
@@ -35,7 +34,7 @@ class CarCard extends StatelessWidget {
                 ),
                 child: Image.network(
                   car.imageUrl,
-                  fit: BoxFit.cover, // Изображение заполняет контейнер
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
@@ -45,12 +44,12 @@ class CarCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    car.name, // Название автомобиля
+                    car.name,
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 4), // Пробел между названием и ценой
+                  SizedBox(height: 4),
                   Text(
-                    '\$${car.price.toStringAsFixed(2)}', // Цена автомобиля
+                    '\$${car.price.toStringAsFixed(2)}',
                     style: TextStyle(fontSize: 14, color: Colors.grey[700]),
                   ),
                 ],
