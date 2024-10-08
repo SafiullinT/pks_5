@@ -7,7 +7,7 @@ class Car {
   final String acceleration;
   final String engineType;
   final String maxSpeed;
-  bool isFavorite; // Добавляем поле для избранного
+  bool isFavorite;
 
   Car(
       this.name,
@@ -18,6 +18,6 @@ class Car {
       this.acceleration,
       this.engineType,
       this.maxSpeed, {
-        this.isFavorite = false, // По умолчанию не в избранном
+        this.isFavorite = false,
       });
 }
