@@ -3,9 +3,9 @@ import '../models/car.dart';
 
 class CarDetailScreen extends StatelessWidget {
   final Car car;
-  final VoidCallback onDeleteCar; // Добавляем параметр для удаления автомобиля
+  final VoidCallback onDeleteCar;
 
-  CarDetailScreen({required this.car, required this.onDeleteCar}); // Обновленный конструктор
+  CarDetailScreen({required this.car, required this.onDeleteCar});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,6 @@ class CarDetailScreen extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.delete),
             onPressed: () {
-              // Покажите диалоговое окно для подтверждения удаления
               showDialog(
                 context: context,
                 builder: (context) {
@@ -26,15 +25,15 @@ class CarDetailScreen extends StatelessWidget {
                     actions: [
                       TextButton(
                         onPressed: () {
-                          Navigator.of(context).pop(); // Закрываем диалог
+                          Navigator.of(context).pop();
                         },
                         child: Text('Отмена'),
                       ),
                       TextButton(
                         onPressed: () {
-                          onDeleteCar(); // Вызываем функцию удаления
-                          Navigator.of(context).pop(); // Закрываем диалог
-                          Navigator.of(context).pop(); // Возвращаемся назад после удаления
+                          onDeleteCar();
+                          Navigator.of(context).pop();
+                          Navigator.of(context).pop();
                         },
                         child: Text('Удалить'),
                       ),
