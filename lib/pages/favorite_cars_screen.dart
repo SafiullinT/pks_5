@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/car.dart';
 import '../components/car_card.dart';
-import '../pages/car_detail_screen.dart'; // Импортируем экран деталей автомобиля
+import '../pages/car_detail_screen.dart';
 
 class FavoriteCarsScreen extends StatelessWidget {
   final List<Car> favoriteCars;
@@ -19,29 +19,29 @@ class FavoriteCarsScreen extends StatelessWidget {
           ? Center(child: Text('Нет избранных автомобилей'))
           : GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2, // Количество столбцов
-          childAspectRatio: 0.8, // Соотношение сторон карточек
-          crossAxisSpacing: 10, // Пробел между столбцами
-          mainAxisSpacing: 10, // Пробел между строками
+          crossAxisCount: 2,
+          childAspectRatio: 0.8,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
         ),
         itemCount: favoriteCars.length,
         itemBuilder: (context, index) {
           final car = favoriteCars[index];
           return CarCard(
             car: car,
-            onDeleteCar: () => toggleFavorite(car), // Удаляем из избранного
-            onToggleFavorite: () => toggleFavorite(car), // Передаем функцию для переключения избранного
+            onDeleteCar: () => toggleFavorite(car),
+            onToggleFavorite: () => toggleFavorite(car),
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => CarDetailScreen(
                     car: car,
-                    onDeleteCar: () => toggleFavorite(car), // Передаем функцию удаления
+                    onDeleteCar: () => toggleFavorite(car),
                   ),
                 ),
               );
-            }, // Добавляем обработчик нажатия
+            },
           );
         },
       ),
